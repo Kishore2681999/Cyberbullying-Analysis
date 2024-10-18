@@ -42,23 +42,7 @@ ORDER BY
     num_tweets DESC;
 
 
---4.Cyberbullying Tweets Containing URLs
-
-SELECT 
-    cyberbullying_type, 
-    COUNT(*) AS tweet_count
-FROM 
-    `cyberbullying-identification.analysis.cyberbullying_tweets`
-WHERE 
-    LOWER(tweet_text) LIKE '%https%'
-    AND cyberbullying_type != 'not_cyberbullying'
-GROUP BY 
-    cyberbullying_type
-ORDER BY 
-    tweet_count DESC;
-
-
---5.Top Hashtags in Tweets
+--4.Top Hashtags in Tweets
 
 SELECT 
     hashtag,
