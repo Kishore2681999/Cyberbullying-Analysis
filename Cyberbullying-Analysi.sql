@@ -6,7 +6,6 @@ SELECT
   ROUND(COUNT(*) * 100.0 / SUM(COUNT(*)) OVER (), 2) AS percentage
 FROM 
   `cyberbullying-identification.analysis.cyberbullying_tweets`
-WHERE cyberbullying_type != 'not_cyberbullying'
 GROUP BY 
   cyberbullying_type
 ORDER BY 
